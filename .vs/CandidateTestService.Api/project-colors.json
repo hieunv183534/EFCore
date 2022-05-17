@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "70f0eaf7-ea31-4070-bd56-504d38cddb81": {
+      "ProjectGuid": "70f0eaf7-ea31-4070-bd56-504d38cddb81",
+      "DisplayName": "CandidateTestService.Api",
+      "ColorIndex": 0
+    },
+    "3daa8124-9586-4493-8420-4f4e0467cdf4": {
+      "ProjectGuid": "3daa8124-9586-4493-8420-4f4e0467cdf4",
+      "DisplayName": "CandidateTestService.Service",
+      "ColorIndex": 1
+    },
+    "5407c628-dccf-4e53-aa53-e702bb6f9036": {
+      "ProjectGuid": "5407c628-dccf-4e53-aa53-e702bb6f9036",
+      "DisplayName": "CandidateTestService.Infrastructure",
+      "ColorIndex": 2
+    },
+    "f3ef1cb0-eac3-4594-bf45-54f722c8c6c9": {
+      "ProjectGuid": "f3ef1cb0-eac3-4594-bf45-54f722c8c6c9",
+      "DisplayName": "CandidateTestService.Core",
+      "ColorIndex": 3
+    },
+    "826b9037-711a-460f-8af7-85962bd83c15": {
+      "ProjectGuid": "826b9037-711a-460f-8af7-85962bd83c15",
+      "DisplayName": "CandidateTestService.Repository",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

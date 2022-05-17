@@ -1,0 +1,13 @@
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\bin\Debug\netcoreapp3.1\CandidateTestService.Core.deps.json
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\bin\Debug\netcoreapp3.1\CandidateTestService.Core.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\bin\Debug\netcoreapp3.1\CandidateTestService.Core.pdb
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.csproj.AssemblyReference.cache
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.AssemblyInfoInputs.cache
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.AssemblyInfo.cs
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.csproj.CoreCompileInputs.cache
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.pdb
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\bin\Debug\netcoreapp3.1\CandidateTestService.Core.runtimeconfig.json
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\bin\Debug\netcoreapp3.1\CandidateTestService.Core.runtimeconfig.dev.json
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Core\obj\Debug\netcoreapp3.1\CandidateTestService.Core.genruntimeconfig.cache

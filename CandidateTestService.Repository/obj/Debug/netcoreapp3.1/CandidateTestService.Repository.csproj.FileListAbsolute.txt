@@ -1,0 +1,16 @@
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\bin\Debug\netcoreapp3.1\CandidateTestService.Repository.deps.json
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\bin\Debug\netcoreapp3.1\CandidateTestService.Repository.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\bin\Debug\netcoreapp3.1\CandidateTestService.Repository.pdb
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\bin\Debug\netcoreapp3.1\CandidateTestService.Core.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\bin\Debug\netcoreapp3.1\CandidateTestService.Core.pdb
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.csproj.AssemblyReference.cache
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.AssemblyInfoInputs.cache
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.AssemblyInfo.cs
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.csproj.CopyComplete
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.pdb
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\bin\Debug\netcoreapp3.1\CandidateTestService.Repository.runtimeconfig.json
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\bin\Debug\netcoreapp3.1\CandidateTestService.Repository.runtimeconfig.dev.json
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Repository\obj\Debug\netcoreapp3.1\CandidateTestService.Repository.genruntimeconfig.cache
