@@ -10,6 +10,9 @@ namespace CandidateTestService.Core.Entities
     [Table("Question")]
     public class Question : BaseEntity
     {
+        private string jsonQuestion;
+        private List<QuestionItem> listQuestion;
+
         [Required]
         public QuestionTypeEnum Type { get; set; }
 
@@ -17,10 +20,24 @@ namespace CandidateTestService.Core.Entities
         public string ContentText { get; set; }
 
         [Column(TypeName = "TEXT")]
-        public string ContentJSON { get; set; }
+        public string ContentJSON {
+            get { return this.jsonQuestion; }
+            set
+            {
+                this.jsonQuestion = value;
+                if (this.listQuestion == null)
+                    this.listQuestion = Newtonsoft.Json.JsonConvert.DeserializeObject<List<QuestionItem>>(value);
+            }
+        }
 
         [NotMapped]
-        public List<QuestionItem> ContentJson { get; set; }
+        public List<QuestionItem> ContentListObject {
+            get { return this.listQuestion; }
+            set { this.listQuestion = value; }
+        }
+
+        [NotMapped]
+        public List<string> ListOptions { get; set; } = new List<string>();
 
         [Required]
         public QuestionCategoryEnum Category { get; set; }

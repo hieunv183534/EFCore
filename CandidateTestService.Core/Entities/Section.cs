@@ -13,6 +13,8 @@ namespace CandidateTestService.Core.Entities
 
         public ICollection<QuestionSection> QuestionSections { get; set; }
 
+        public Guid TestId { get; set; }
+
         [ForeignKey("TestId")]
         public Test Test { get; set; }
     }

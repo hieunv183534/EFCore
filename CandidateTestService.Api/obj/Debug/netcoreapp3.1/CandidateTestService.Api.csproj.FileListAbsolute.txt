@@ -70,3 +70,15 @@ C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll

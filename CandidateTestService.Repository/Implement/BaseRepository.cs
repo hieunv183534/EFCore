@@ -13,7 +13,7 @@ namespace CandidateTestService.Repository.Implement
     {
         protected readonly DatabaseContext _databaseContext;
         protected readonly string _tableName;
-        DbSet<TEntity> _entities;
+        protected DbSet<TEntity> _entities;
 
         public BaseRepository(DatabaseContext databaseContext)
         {
@@ -25,18 +25,22 @@ namespace CandidateTestService.Repository.Implement
         public int Add(TEntity entity)
         {
             _entities.Add(entity);
-            _databaseContext.SaveChanges();
-            return _entities.Count();
+            int rows = _databaseContext.SaveChanges();
+            return rows;
         }
 
         public int Delete(Guid id)
         {
-            _entities.Remove(GetById(id));
-            _databaseContext.SaveChanges();
-            return 1;
+            var entity = GetById(id);
+            if(entity != null)
+            {
+                _entities.Remove(entity);
+            }
+            int rows = _databaseContext.SaveChanges();
+            return rows;
         }
 
-        public List<TEntity> GetAll()
+        public virtual List<TEntity> GetAll()
         {
             List<TEntity> listEntity = _entities.ToList();
 
@@ -66,8 +70,8 @@ namespace CandidateTestService.Repository.Implement
                 prop.SetValue(myEntity, propValue);
             }
 
-            _databaseContext.SaveChanges();
-            return 1;
+            int rows = _databaseContext.SaveChanges();
+            return rows;
         }
     }
 }

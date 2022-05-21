@@ -119,7 +119,7 @@ namespace CandidateTestService.Repository.Migrations
 
                     b.HasIndex("SectionId");
 
-                    b.ToTable("QuestionSection");
+                    b.ToTable("QuestionSections");
                 });
 
             modelBuilder.Entity("CandidateTestService.Core.Entities.Section", b =>
@@ -169,7 +169,7 @@ namespace CandidateTestService.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Test");
+                    b.ToTable("Tests");
                 });
 
             modelBuilder.Entity("CandidateTestService.Core.Entities.TestAccount", b =>
@@ -196,7 +196,7 @@ namespace CandidateTestService.Repository.Migrations
 
                     b.HasIndex("TestId");
 
-                    b.ToTable("TestAccount");
+                    b.ToTable("TestAccounts");
                 });
 
             modelBuilder.Entity("CandidateTestService.Core.Entities.TestResult", b =>
@@ -226,7 +226,30 @@ namespace CandidateTestService.Repository.Migrations
 
                     b.HasIndex("TestId");
 
-                    b.ToTable("TestResult");
+                    b.ToTable("TestResults");
+                });
+
+            modelBuilder.Entity("CandidateTestService.Core.Entities.TokenAccount", b =>
+                {
+                    b.Property<byte[]>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("varbinary(16)");
+
+                    b.Property<DateTime?>("CreatedAt")
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TokenAccounts");
                 });
 
             modelBuilder.Entity("CandidateTestService.Core.Entities.QuestionSection", b =>

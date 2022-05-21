@@ -7,6 +7,8 @@ namespace CandidateTestService.Core.Entities
 {
     public class QuestionSection : BaseEntity
     {
+        public Guid QuestionId { get; set; }
+
         [ForeignKey("QuestionId")]
         public Question Question { get; set; }
 

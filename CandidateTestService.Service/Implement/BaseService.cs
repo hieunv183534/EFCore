@@ -18,13 +18,13 @@ namespace CandidateTestService.Service.Implement
             _serviceResult = new ServiceResult();
         }
 
-        public ServiceResult Add(TEntity entity)
+        public virtual ServiceResult Add(TEntity entity)
         {
             try
             {
                 int rowAffect = _baseRepository.Add(entity);
                 _serviceResult.Response = new ResponseModel(2001, "OK", rowAffect);
-                _serviceResult.StatusCode = 500;
+                _serviceResult.StatusCode = 201;
                 return _serviceResult;
             }
             catch (Exception ex)
@@ -41,7 +41,7 @@ namespace CandidateTestService.Service.Implement
             {
                 int rowAffect = _baseRepository.Delete(id);
                 _serviceResult.Response = new ResponseModel(2001, "OK", rowAffect);
-                _serviceResult.StatusCode = 500;
+                _serviceResult.StatusCode = 201;
                 return _serviceResult;
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace CandidateTestService.Service.Implement
             }
         }
 
-        public ServiceResult GetAll()
+        public virtual ServiceResult GetAll()
         {
             try
             {
@@ -78,7 +78,7 @@ namespace CandidateTestService.Service.Implement
             }
         }
 
-        public ServiceResult GetById(Guid id)
+        public virtual ServiceResult GetById(Guid id)
         {
             try
             {
@@ -104,13 +104,13 @@ namespace CandidateTestService.Service.Implement
             }
         }
 
-        public ServiceResult Update(TEntity entity, Guid id)
+        public virtual ServiceResult Update(TEntity entity, Guid id)
         {
             try
             {
                 int rowAffect = _baseRepository.Update(entity, id);
                 _serviceResult.Response = new ResponseModel(2001, "OK", rowAffect);
-                _serviceResult.StatusCode = 500;
+                _serviceResult.StatusCode = 201;
                 return _serviceResult;
             }
             catch (Exception ex)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TQQGRm//b8rvK/PR1HY8erngPPwW7z8wcInFljCEBkvmG6W95VUDNqRk6AvLSkCv1faJYS4tUZxpODurlWzJ+g==",
+  "dgSpecHash": "NAGKXrI5gdr+HXqG+TjKRfkV6LL9j06TADuvH/q8SQk1zJHdbmmlyfxUInBQYWITNk69AOxHW0SalWGTXvPsyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Hi\\Desktop\\CandidateTestService.Api\\CandidateTestService.Repository\\CandidateTestService.Repository.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\Hi\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Hi\\.nuget\\packages\\mysql.data\\8.0.28\\mysql.data.8.0.28.nupkg.sha512",
     "C:\\Users\\Hi\\.nuget\\packages\\mysql.entityframeworkcore\\3.1.19\\mysql.entityframeworkcore.3.1.19.nupkg.sha512",
+    "C:\\Users\\Hi\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Hi\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\Hi\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Hi\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

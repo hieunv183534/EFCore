@@ -8,6 +8,10 @@ namespace CandidateTestService.Repository
 {
     public class DatabaseContext : DbContext
     {
+        public DatabaseContext()
+        {
+        }
+
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }
@@ -15,5 +19,11 @@ namespace CandidateTestService.Repository
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Section> Sections { get; set; }
+        public DbSet<QuestionSection> QuestionSections { get; set; }
+        public DbSet<Test> Tests { get; set; }
+        public DbSet<TestResult> TestResults { get; set; }
+        public DbSet<TokenAccount> TokenAccounts { get; set; }
+        public DbSet<TestAccount> TestAccounts { get; set; }
+
     }
 }
