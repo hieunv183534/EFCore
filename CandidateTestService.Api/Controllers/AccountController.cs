@@ -8,7 +8,6 @@ using System;
 
 namespace CandidateTestService.Api.Controllers
 {
-    [Authorize]
     [Route("api/account")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -28,7 +27,6 @@ namespace CandidateTestService.Api.Controllers
             _jwtAuthenticationManager = jwtAuthenticationManager;
         }
 
-        [AllowAnonymous]
         [HttpPost("login")]
         public IActionResult Login([FromBody] Account account)
         {
@@ -48,23 +46,23 @@ namespace CandidateTestService.Api.Controllers
         }
 
 
-        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult Add([FromBody] Account account)
         {
+            account.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
             var serviceResult = _accountService.Add(account);
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPut("{accountId}")]
+        //[AllowAnonymous]
         public IActionResult Update([FromBody] Account account, [FromRoute] Guid accountId)
         {
+            account.Password = BCrypt.Net.BCrypt.HashPassword(account.Password);
             var serviceResult = _accountService.Update(account, accountId);
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
-        [Authorize(Roles = "admin")]
         [HttpGet("{accountId}")]
         public IActionResult GetAccount([FromRoute] Guid accountId)
         {
@@ -72,7 +70,6 @@ namespace CandidateTestService.Api.Controllers
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
-        [Authorize(Roles = "admin")]
         [HttpDelete("{accountId}")]
         public IActionResult Delete([FromRoute] Guid accountId)
         {
@@ -80,7 +77,6 @@ namespace CandidateTestService.Api.Controllers
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
-        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult GetAccounts([FromQuery] int index, [FromQuery] int count, [FromQuery] string searchTerms, [FromQuery] string role)
         {

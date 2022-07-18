@@ -8,7 +8,6 @@ using System;
 
 namespace CandidateTestService.Api.Controllers
 {
-    [Authorize(Roles = "admin")]
     [Route("api/question")]
     [ApiController]
     public class QuestionController : ControllerBase

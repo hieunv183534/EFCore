@@ -62,6 +62,12 @@ namespace CandidateTestService.Api
             services.AddScoped(typeof(ITestRepository), typeof(TestRepository));
             services.AddScoped(typeof(ITestService), typeof(TestService));
 
+            services.AddScoped(typeof(ITestAccountRepository), typeof(TestAccountRepository));
+            services.AddScoped(typeof(ITestAccountService), typeof(TestAccountService));
+
+            services.AddScoped(typeof(ITestResultRepository), typeof(TestResultRepository));
+            services.AddScoped(typeof(ITestResultService), typeof(TestResultService));
+
 
             services.AddScoped(typeof(IJwtAuthenticationManager), typeof(JwtAuthenticationManager));
 

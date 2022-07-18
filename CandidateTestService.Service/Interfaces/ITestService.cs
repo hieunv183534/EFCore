@@ -10,5 +10,9 @@ namespace CandidateTestService.Service.Interfaces
         ServiceResult GetTests(int index, int count, string searchTerms, bool isHidenAnswer);
 
         ServiceResult GetTest(Guid id, bool isHidenAnswer);
+
+        ServiceResult GetCandidatesOfTest(Guid testId);
+
+        ServiceResult GetTestsAssignToMe(Guid candidateId);
     }
 }

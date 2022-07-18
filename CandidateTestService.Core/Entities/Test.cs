@@ -8,7 +8,6 @@ namespace CandidateTestService.Core.Entities
 {
     public class Test : BaseEntity
     {
-        [Index(IsUnique = true)]
         [StringLength(30)]
         public string TestCode { get; set; }
 

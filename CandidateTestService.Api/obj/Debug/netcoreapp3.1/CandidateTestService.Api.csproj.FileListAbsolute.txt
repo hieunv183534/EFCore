@@ -61,15 +61,6 @@ C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\obj\Debug\netcoreapp3.1\CandidateTestService.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\EntityFramework.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\System.CodeDom.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll

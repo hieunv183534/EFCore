@@ -10,5 +10,9 @@ namespace CandidateTestService.Repository.Interfaces
         Test GetTest(Guid id, bool isHidenAnswer);
 
         object GetTests(int index, int count, string searchTerms, bool isHidenAnswer);
+
+        List<CandidateOfTest> GetCandidatesOfTest(Guid testId);
+
+        List<Test> GetTestsAssignToMe(Guid candidateId);
     }
 }

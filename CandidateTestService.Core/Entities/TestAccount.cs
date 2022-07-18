@@ -7,6 +7,10 @@ namespace CandidateTestService.Core.Entities
 {
     public class TestAccount : BaseEntity
     {
+        public Guid TestId { get; set; }
+
+        public Guid AccountId { get; set; }
+
         [ForeignKey("TestId")]
         public Test Test { get; set; }
 

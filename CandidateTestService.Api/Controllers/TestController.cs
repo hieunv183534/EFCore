@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Security.Claims;
 
 namespace CandidateTestService.Api.Controllers
 {
-    [Authorize]
     [Route("api/test")]
     [ApiController]
     public class TestController : ControllerBase
@@ -19,7 +19,6 @@ namespace CandidateTestService.Api.Controllers
             _testService = testService;
         }
 
-        [Authorize(Roles = "admin")]
         [HttpPost]
         public IActionResult Add([FromBody] Test test)
         {
@@ -27,7 +26,7 @@ namespace CandidateTestService.Api.Controllers
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
-        [Authorize(Roles = "admin")]
+
         [HttpGet("{id}")]
         public IActionResult GetByIdAdmin([FromRoute] Guid id)
         {
@@ -35,7 +34,6 @@ namespace CandidateTestService.Api.Controllers
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
-        [Authorize(Roles = "admin")]
         [HttpGet]
         public IActionResult GetTestsAdmin([FromQuery] int index, [FromQuery] int count, [FromQuery] string searchTerms)
         {
@@ -44,7 +42,7 @@ namespace CandidateTestService.Api.Controllers
         }
 
 
-        [Authorize(Roles = "candidate")]
+
         [HttpGet("candidate/{id}")]
         public IActionResult GetById([FromRoute] Guid id)
         {
@@ -52,7 +50,7 @@ namespace CandidateTestService.Api.Controllers
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
-        [Authorize(Roles = "candidate")]
+
         [HttpGet("candidate")]
         public IActionResult GetTests([FromQuery] int index, [FromQuery] int count, [FromQuery] string searchTerms)
         {
@@ -60,5 +58,34 @@ namespace CandidateTestService.Api.Controllers
             return StatusCode(serviceResult.StatusCode, serviceResult.Response);
         }
 
+
+        [HttpPut("{id}")]
+        public IActionResult Update([FromBody] Test test, [FromRoute] Guid id)
+        {
+            var serviceResult = _testService.Update(test, id);
+            return StatusCode(serviceResult.StatusCode, serviceResult.Response);
+        }
+
+        [HttpGet("getCandidatesOfTest/{testId}")]
+        public IActionResult GetCandidatesOfTest([FromRoute] Guid testId)
+        {
+            var serviceResult = _testService.GetCandidatesOfTest(testId);
+            return StatusCode(serviceResult.StatusCode, serviceResult.Response);
+        }
+
+        [HttpGet("getTestsAssignToMe")]
+        public IActionResult GetTestsAssignToMe([FromQuery] Guid myId)
+        {
+            //Guid myId = Guid.Parse(User.FindFirstValue(ClaimTypes.Name));
+            var serviceResult = _testService.GetTestsAssignToMe(myId);
+            return StatusCode(serviceResult.StatusCode, serviceResult.Response);
+        }
+
+        [HttpDelete("{testId}")]
+        public IActionResult DeleteTest([FromRoute] Guid testId)
+        {
+            var serviceResult = _testService.Delete(testId);
+            return StatusCode(serviceResult.StatusCode, serviceResult.Response);
+        } 
     }
 }

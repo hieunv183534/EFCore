@@ -7,24 +7,36 @@ namespace CandidateTestService.Core.Entities
 {
     public class TestResult : BaseEntity
     {
-        [ForeignKey("AccountId")]
-        public Account Account { get; set; }
+        private Test testAnswer;
+        private string testAnswerJson;
 
-        [ForeignKey("TestId")]
-        public Test Test { get; set; }
+        public Guid AccountId { get; set; }
 
         [NotMapped]
-        public List<QuestionAnswer> ListAnswer { get; set; }
+        public Test TestAnswer
+        {
+            get { return this.testAnswer; }
+            set { this.testAnswer = value; }
+        }
 
-        public string Answers { get; set; }
-    }
+        [Column(TypeName = "TEXT")]
+        public string TestAnswerJSON
+        {
+            get { return this.testAnswerJson; }
+            set
+            {
+                this.testAnswerJson = value;
+                if (this.testAnswer == null)
+                    this.testAnswer = Newtonsoft.Json.JsonConvert.DeserializeObject<Test>(value);
+            }
+        }
 
-    public class QuestionAnswer
-    {
-        public Guid QuestionId { get; set; }
+        public int SoCauDung { get; set; }
 
-        public int AnswerOption { get; set; }
+        public int SoCauSai { get; set; }
 
-        public string AnswerText { get; set; }
+        public int SoCauTuLuan { get; set; }
+
+        public bool Marked { get; set; }
     }
 }

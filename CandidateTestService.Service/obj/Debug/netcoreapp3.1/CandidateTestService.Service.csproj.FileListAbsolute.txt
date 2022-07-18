@@ -13,6 +13,3 @@ C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Service\obj\De
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Service\obj\Debug\netcoreapp3.1\CandidateTestService.Service.csproj.CopyComplete
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Service\obj\Debug\netcoreapp3.1\CandidateTestService.Service.dll
 C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Service\obj\Debug\netcoreapp3.1\CandidateTestService.Service.pdb
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Service\bin\Debug\netcoreapp3.1\CandidateTestService.Service.runtimeconfig.json
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Service\bin\Debug\netcoreapp3.1\CandidateTestService.Service.runtimeconfig.dev.json
-C:\Users\Hi\Desktop\CandidateTestService.Api\CandidateTestService.Service\obj\Debug\netcoreapp3.1\CandidateTestService.Service.genruntimeconfig.cache

@@ -30,14 +30,16 @@ namespace CandidateTestService.Core.Entities
             }
         }
 
+        [Column(TypeName = "TEXT")]
+        public string AnswerText { get; set; }
+
+        public float EssayScore { get; set; }
+
         [NotMapped]
         public List<QuestionItem> ContentListObject {
             get { return this.listQuestion; }
             set { this.listQuestion = value; }
         }
-
-        [NotMapped]
-        public List<string> ListOptions { get; set; } = new List<string>();
 
         [Required]
         public QuestionCategoryEnum Category { get; set; }

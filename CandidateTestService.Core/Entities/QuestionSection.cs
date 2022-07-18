@@ -12,6 +12,8 @@ namespace CandidateTestService.Core.Entities
         [ForeignKey("QuestionId")]
         public Question Question { get; set; }
 
+        public Guid SectionId { get; set; }
+
         [ForeignKey("SectionId")]
         public Section Section { get; set; }
     }

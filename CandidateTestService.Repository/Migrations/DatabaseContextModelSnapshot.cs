@@ -62,6 +62,9 @@ namespace CandidateTestService.Repository.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserName")
+                        .IsUnique();
+
                     b.ToTable("Account");
                 });
 
@@ -70,6 +73,9 @@ namespace CandidateTestService.Repository.Migrations
                     b.Property<byte[]>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("varbinary(16)");
+
+                    b.Property<string>("AnswerText")
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("Category")
                         .HasColumnType("int");
@@ -83,6 +89,9 @@ namespace CandidateTestService.Repository.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime");
+
+                    b.Property<float>("EssayScore")
+                        .HasColumnType("float");
 
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime");
@@ -108,9 +117,11 @@ namespace CandidateTestService.Repository.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<byte[]>("QuestionId")
+                        .IsRequired()
                         .HasColumnType("varbinary(16)");
 
                     b.Property<byte[]>("SectionId")
+                        .IsRequired()
                         .HasColumnType("varbinary(16)");
 
                     b.HasKey("Id");
@@ -138,6 +149,7 @@ namespace CandidateTestService.Repository.Migrations
                         .HasColumnType("text");
 
                     b.Property<byte[]>("TestId")
+                        .IsRequired()
                         .HasColumnType("varbinary(16)");
 
                     b.HasKey("Id");
@@ -169,6 +181,9 @@ namespace CandidateTestService.Repository.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("TestCode")
+                        .IsUnique();
+
                     b.ToTable("Tests");
                 });
 
@@ -179,6 +194,7 @@ namespace CandidateTestService.Repository.Migrations
                         .HasColumnType("varbinary(16)");
 
                     b.Property<byte[]>("AccountId")
+                        .IsRequired()
                         .HasColumnType("varbinary(16)");
 
                     b.Property<DateTime?>("CreatedAt")
@@ -188,6 +204,7 @@ namespace CandidateTestService.Repository.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<byte[]>("TestId")
+                        .IsRequired()
                         .HasColumnType("varbinary(16)");
 
                     b.HasKey("Id");
@@ -206,25 +223,33 @@ namespace CandidateTestService.Repository.Migrations
                         .HasColumnType("varbinary(16)");
 
                     b.Property<byte[]>("AccountId")
+                        .IsRequired()
                         .HasColumnType("varbinary(16)");
-
-                    b.Property<string>("Answers")
-                        .HasColumnType("text");
 
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime");
 
+                    b.Property<bool>("Marked")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime");
 
-                    b.Property<byte[]>("TestId")
-                        .HasColumnType("varbinary(16)");
+                    b.Property<int>("SoCauDung")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoCauSai")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SoCauTuLuan")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TestAnswerJSON")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
-
-                    b.HasIndex("TestId");
 
                     b.ToTable("TestResults");
                 });
@@ -256,40 +281,48 @@ namespace CandidateTestService.Repository.Migrations
                 {
                     b.HasOne("CandidateTestService.Core.Entities.Question", "Question")
                         .WithMany("QuestionSections")
-                        .HasForeignKey("QuestionId");
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CandidateTestService.Core.Entities.Section", "Section")
                         .WithMany("QuestionSections")
-                        .HasForeignKey("SectionId");
+                        .HasForeignKey("SectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CandidateTestService.Core.Entities.Section", b =>
                 {
                     b.HasOne("CandidateTestService.Core.Entities.Test", "Test")
                         .WithMany("Sections")
-                        .HasForeignKey("TestId");
+                        .HasForeignKey("TestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CandidateTestService.Core.Entities.TestAccount", b =>
                 {
                     b.HasOne("CandidateTestService.Core.Entities.Account", "Account")
                         .WithMany("TestAccounts")
-                        .HasForeignKey("AccountId");
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("CandidateTestService.Core.Entities.Test", "Test")
                         .WithMany("TestAccounts")
-                        .HasForeignKey("TestId");
+                        .HasForeignKey("TestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CandidateTestService.Core.Entities.TestResult", b =>
                 {
-                    b.HasOne("CandidateTestService.Core.Entities.Account", "Account")
+                    b.HasOne("CandidateTestService.Core.Entities.Account", null)
                         .WithMany("TestResults")
-                        .HasForeignKey("AccountId");
-
-                    b.HasOne("CandidateTestService.Core.Entities.Test", "Test")
-                        .WithMany()
-                        .HasForeignKey("TestId");
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

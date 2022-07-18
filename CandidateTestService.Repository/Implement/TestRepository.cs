@@ -13,6 +13,26 @@ namespace CandidateTestService.Repository.Implement
         {
         }
 
+        public List<CandidateOfTest> GetCandidatesOfTest(Guid testId)
+        {
+            var query = from ta in _databaseContext.TestAccounts where ta.TestId.Equals(testId)
+                        select ta.Account.Id;
+            List<Guid> listGuid = query.ToList();
+            List<Account> listCandidate = _databaseContext.Accounts.Where(a=> a.Role == "candidate").ToList();
+            var listCandidateOfTest =  new List<CandidateOfTest>();
+            foreach(var candidate in listCandidate)
+            {
+                if (listGuid.Contains(candidate.Id))
+                {
+                    listCandidateOfTest.Add(new CandidateOfTest() { Username = candidate.UserName, CandidateId = candidate.Id, IsOfTest = true });
+                }
+                else
+                {
+                    listCandidateOfTest.Add(new CandidateOfTest() { Username = candidate.UserName, CandidateId = candidate.Id, IsOfTest = false });
+                }
+            }
+            return listCandidateOfTest;
+        }
 
         public Test GetTest(Guid id, bool isHidenAnswer)
         {
@@ -24,17 +44,23 @@ namespace CandidateTestService.Repository.Implement
         public object GetTests(int index, int count, string searchTerms, bool isHidenAnswer)
         {
             var query = from test in _databaseContext.Tests 
-                        where test.TestName == searchTerms || test.TestCode == searchTerms select test;
+                        where test.TestName.Contains(searchTerms) || test.TestCode.Contains(searchTerms)
+                        select test;
             List<Test> allTest = query.ToList();
             List<Test> data = allTest.Skip(index).Take(count).ToList();
-            data.ForEach(test => {
-                LoadMoreTestInfo(test, isHidenAnswer);
-            });
             return new
             {
                 total = allTest.Count,
                 data = data
             };
+        }
+
+        public List<Test> GetTestsAssignToMe(Guid candidateId)
+        {
+            var query = from t in _databaseContext.Tests join ta in _databaseContext.TestAccounts
+                        on t.Id equals ta.TestId where ta.AccountId.Equals(candidateId) select t;
+            List<Test> testsOfMe = query.ToList();
+            return testsOfMe;
         }
 
         private void LoadMoreTestInfo(Test test, bool isHidenAnswer)
@@ -55,12 +81,13 @@ namespace CandidateTestService.Repository.Implement
                         questionSection.Question.ContentJSON = null;
                         questionSection.Question.ContentListObject.ForEach(questionItem =>
                         {
-                            questionSection.Question.ListOptions.Add(questionItem.Key);
+                            questionItem.Value = false;
                         });
-                        questionSection.Question.ContentListObject = null;
                     }
                 }
             }
         }
+
+
     }
 }

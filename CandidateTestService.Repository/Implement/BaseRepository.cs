@@ -59,6 +59,7 @@ namespace CandidateTestService.Repository.Implement
 
         public int Update(TEntity entity, Guid id)
         {
+
             TEntity myEntity = GetById(id);
             var props = myEntity.GetType().GetProperties();
 
